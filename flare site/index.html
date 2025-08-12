@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>flareclaim</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <!-- HEADER / NAVIGATION -->
+<header class="navbar">
+  <div class="navbar-top">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="assets/flare-logo.png" alt="Flare Logo" class="logo-img" />
+      <span class="logo-text">FlareClaim</span>
+    </div>
+
+    <!-- Desktop nav links -->
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Governance</a>
+      <a href="#">Project</a>
+      <a href="#" class="cta-button">Claim</a>
+    </nav>
+
+    <!-- Hamburger icon (mobile) -->
+    <span class="menu-toggle" id="mobileToggle">
+      <img src="assets/mobile-menu.png" alt="menu" class="menu-icon" />
+    </span>
+  </div>
+
+  <!-- Mobile menu links -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#">Home</a>
+    <a href="#">Governance</a>
+    <a href="#">Project</a>
+    <a href="#" class="cta-button">Claim</a>
+  </div>
+
+  <script>
+    const mobileToggle = document.getElementById('mobileToggle');
+   const mobileMenu = document.getElementById('mobileMenu');
+   const toggleIcon = mobileToggle.querySelector('img');
+
+   // File paths for the two icons
+   const menuIcon = 'assets/mobile-menu.png'; // Your menu icon
+   const closeIcon = 'assets/close-menu.png'; // X icon placeholder
+
+   mobileToggle.addEventListener('click', () => {
+   // Toggle mobile menu open/close
+   mobileMenu.classList.toggle('active');
+
+   // Swap icons based on menu state
+   if (mobileMenu.classList.contains('active')) {
+    toggleIcon.src = closeIcon;
+   } else {
+    toggleIcon.src = menuIcon;
+   }
+   });
+ </script>
+
+  <!-- Bottom row: ticker -->
+  <div class="ticker-container">
+    <div class="ticker-slide">
+      <span>User24**** received 1,458 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+      <span>0x9df1**** claimed 3,200 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+      <span>email23****@gmail.com received 1,050 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+      <span>wallet78**** claimed 4,500 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+      <span>user12**** received 1,200 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+      <span>wallet3f9xg**** received 2,412 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>user45kg8**** received 4,900 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>0x9df1a**** received 1,368 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>addrm2c34**** received 3,782 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>email2fe7x****@gmail.com received 1,200 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>wallet4rjs9**** received 4,505 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>user15rb4**** received 3,007 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>0x4cc78**** received 5,020 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>walletzm7a8**** received 1,899 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>emailu490f****@gmail.com received 2,004 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>userpl9ad**** received 2,302 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>addrxmv20**** received 3,600 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>0x1ab8e**** received 1,124 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>walletuv48s**** received 4,033 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>emailpw8gd****@protonmail.com received 2,900 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>user3f9xg**** received 1,500 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+      <span>wallet7kp9a**** received 2,145 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>0x1bcf3**** claimed 4,988 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>email4xmpd****@gmail.com received 1,230 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>user89gf2**** received 3,607 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>walletzd93n**** received 5,004 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>addrjs26t**** claimed 1,904 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>0x8fe20**** received 2,358 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>user9vtxh**** received 2,788 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>wallet5dr7z**** received 3,221 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>emailq03da****@protonmail.com received 4,607 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>userj26kp**** claimed 3,111 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>0x7c38b**** received 1,763 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>wallet2nrb0**** received 4,201 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>addrc7p3g**** received 2,999 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>emailru15e****@gmail.com received 1,890 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>wallet3f9xg**** received 2,412 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>user45kg8**** received 4,900 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+     <span>0x9df1a**** received 1,368 <img src="assets/icons/xrp.png" class="coin-icon"> XRP</span>
+     <span>email23****@gmail.com received 2,005 <img src="assets/icons/flr.png" class="coin-icon"> FLR</span>
+
+    </div>
+  </div>
+
+</header>
+
+<!-- ✅ PLACE THIS: Hero Section HTML -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="https://flare.network/en/static/video/home_providers_desktop.webm" type="video/webm">
+      <source src="https://flare.network/en/static/video/home_providers_desktop.webm" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+  <div class="hero-content">
+    <h1 class="hero-title">Claim Your Flare & XRP Drops</h1>
+    <p class="hero-subtitle">Secure your tokens. Instant. Decentralized. Powered by Flare Network.</p>
+    <div class="hero-buttons">
+      <a href="#" class="hero-btn primary">Claim Now</a>
+      <a href="#" class="hero-btn secondary">Learn More</a>
+  </div>
+</section>
+
+<!-- CENTERED LOGO SECTION -->
+<section class="center-logo">
+  <!-- Logo Image -->
+  <img src="assets/flare-logo.png" alt="Flare Logo" class="center-logo-img" />
+</section>
+
+<!-- Foundational Technology Section -->
+<section class="foundational-section">
+  <div class="foundational-container">
+    
+    <!-- Left: Embedded Video -->
+    <div class="foundational-video">
+      <video autoplay loop muted playsinline>
+        <source src="https://flare.network/en/static/video/city_ori.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Right: 2x2 Write-ups -->
+    <div class="foundational-text-grid">
+      <!-- Box 1 -->
+      <div class="tech-box">
+        <h3>Enshrined Data Protocols</h3>
+        <p>Flare’s protocols are integrated into the blockchain's core, and inherit the economic security of the entire network.</p>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="tech-box">
+        <h3>Ethereum Virtual Machine</h3>
+        <p>Flare is EVM compatible with out-of-the-box support for all your favorite tooling.</p>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="tech-box">
+        <h3>Flare Stake</h3>
+        <p>Flare uses a proof-of-stake (PoS) mechanism to ensure a significant and consistent level of economic security.</p>
+      </div>
+
+      <!-- Box 4 - Generated content -->
+      <div class="tech-box">
+        <h3>Decentralized Oracle Layer</h3>
+        <p>Flare delivers decentralized data to smart contracts from external sources, enabling real-world applications across DeFi and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="community-reward-section">
+  <div class="community-reward-wrapper">
+    <!-- Left: Text -->
+    <div class="community-text">
+      <h2>FlareDrops</h2>
+      <p>FlareDrops totaling 24.2 billion FLR can be claimed by community members who have wrapped their FLR or staked to a Flare validator.</p>
+      <p>Approximately 670 million FLR are divided among network participants based on their combined wrapped FLR (WFLR) and staked FLR. FlareDrops need to be claimed within 67 days, after which any remaining FLR is burnt.</p>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="community-image">
+      <img src="https://flare.network/_next/image?url=%2Fapi%2Fmedia%2Ffile%2FCommunity%20Rewards%20Allocation.webp&w=1080&q=75" alt="Community Rewards Allocation Chart" />
+    </div>
+  </div>
+</section>
+
+<section class="blocktime-section">
+  <!-- Left side with background video -->
+  <div class="blocktime-video">
+    <video autoplay muted loop playsinline class="blocktime-bg-video">
+      <source src="https://flare.network/en/static/video/home_fast_desktop.webm" type="video/webm" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Right side with text -->
+  <div class="blocktime-text">
+    <h2 class="blocktime-title">Fast</h2>
+    <p class="blocktime-number" id="blockCounter">254,610,024</p>
+    <p class="blocktime-subtitle">1.4s avg block time with single-slot finality</p>
+  </div>
+</section>
+
+<script>
+  // Start from this number
+  let count = 254610024;
+
+  // Find the number element on the page
+  const counterElement = document.getElementById("blockCounter");
+
+  // Every 3 seconds, add +1 to the number
+  setInterval(() => {
+    count++;
+    counterElement.textContent = count.toLocaleString(); // Format with commas
+  }, 3000);
+</script>
+
+<div id="flare-dashboard" class="dashboard-container">
+  Loading prices...
+</div>
+
+<script>
+const tokens = [
+  { id: 'flare-networks', label: 'FLR' },
+  { id: 'wrapped-flare', label: 'WFLR' },
+  { id: 'flare-staked-ether', label: 'FLRETH' },
+  { id: 'stargate-bridged-usdt-flare-network', label: 'USDT (Stargate)' },
+  { id: 'flarefox', label: 'FLX' },
+  { id: 'ripple', label: 'XRP' },
+  { id: 'litecoin', label: 'LTC' },
+  { id: 'dogecoin', label: 'DOGE' }
+];
+
+// Use a free CORS proxy
+const CORS_PROXY = "https://api.allorigins.win/raw?url=";
+
+async function fetchDashboard() {
+  const ids = tokens.map(t => t.id).join(',');
+  const apiURL = `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd&include_24hr_change=true`;
+
+  try {
+    const res = await fetch(CORS_PROXY + encodeURIComponent(apiURL));
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+
+    const container = document.getElementById('flare-dashboard');
+    container.innerHTML = tokens.map(t => {
+      const info = data[t.id] || {};
+      const price = info.usd ? `$${info.usd.toFixed(4)}` : 'N/A';
+      const change = info.usd_24h_change !== undefined ? info.usd_24h_change.toFixed(2) + '%' : 'N/A';
+      const changeClass = info.usd_24h_change >= 0 ? '' : 'negative';
+
+      return `
+        <div class="dashboard-card">
+          <h4>${t.label}</h4>
+          <div class="price">${price}</div>
+          <div class="change ${changeClass}">${change}</div>
+        </div>`;
+    }).join('');
+
+  } catch (err) {
+    document.getElementById('flare-dashboard').textContent = "Failed to load prices: " + err;
+  }
+}
+
+fetchDashboard();
+setInterval(fetchDashboard, 60000); // refresh every minute
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

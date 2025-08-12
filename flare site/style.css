@@ -1,0 +1,794 @@
+/* ================================
+   HEADER - GENERAL STYLES
+   ================================ */
+
+/* Reset margins and set global box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  text-align: center; /* If you want inline content centered */
+}
+
+/* For sections that should be centered but not full width */
+section {
+  max-width: 1200px;
+  margin: 0 auto; /* Centers horizontally */
+  padding: 0 20px; /* Keeps text away from screen edges */
+}
+
+
+/* Navbar container */
+.navbar {
+  background-color: #ffffff; /* Dark background */
+  color: white;
+  position: fixed;
+  padding: 0px 0px;
+  font-family: Arial, sans-serif;
+  z-index: 999; /* Ensure it stays on top */
+  width: 100%;
+}
+
+/* Top row containing logo + nav + login icon/hamburger */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+/* Logo area (image + text) */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  height: 25px;
+  filter: brightness(1.2) saturate(0.9) hue-rotate(250deg); /* Optional blue tint */
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* ================================
+   NAVIGATION LINKS (DESKTOP)
+   ================================ */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff; /* blue hover */
+}
+
+/* Claim button style */
+.cta-button {
+  background-color: #007bff;
+  color: rgb(255, 255, 255) !important;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: Semibold;
+}
+
+/* Login icon */
+.login-icon {
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+  height: 24px;
+  text-decoration: none;
+}
+
+
+/* ================================
+   HAMBURGER MENU (MOBILE)
+   ================================ */
+
+/* Toggle button (mobile only) */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile dropdown menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: white; /* Changed to solid white */
+  padding: 20px 0;
+  position: absolute;
+  top: 119px; /* Adjust to match header height */
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  display: flex;
+  max-height: 600px; /* Large enough to fit links */
+  opacity: 1;
+}
+
+/* Mobile nav links */
+.mobile-menu a {
+  padding: 25px 20px;
+  font-size: 22px;
+  color: #000;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.mobile-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+@media (max-width: 768px) {
+  /* Hide desktop nav links */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show hamburger icon */
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-top {
+    padding: 18px 15px; /* Align items to the left */
+  }
+
+  .mobile-menu {
+    text-align: left;
+  }
+
+}
+
+
+/* Ticker Container Inside Header */
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-top: 5px;
+}
+
+/* Scrolling Text */
+.ticker-slide {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slide-left 80s linear infinite;
+  font-size: 10px;
+  padding: 6px 60px;
+  color: black;
+}
+
+.ticker-slide span {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+/* Animation Keyframes */
+@keyframes slide-left {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.coin-icon {
+  height: 14px;
+  width: 14px;
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+* {
+  margin: 0;
+  padding: 10;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+}
+
+/* HERO SECTION */
+
+
+.hero {
+  display: flex;
+  flex-direction: row-reverse; /* 🔁 Flips left & right */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px 5%;
+  gap: 50px;
+  margin-top: 125px; /* Match header height */
+  background-color: #fff;
+  flex-wrap: wrap; /* For responsiveness */
+}
+
+/* LEFT SIDE - VIDEO */
+.hero-video-container {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  opacity: 1;
+  transform: scale(1.85);
+  filter: brightness(1.2) saturate(0.9) hue-rotate(250deg); /* Optional blue tint */
+  pointer-events: none;
+}
+
+/* ============================
+   HERO RIGHT SIDE - TEXT AREA
+=============================== */
+.hero-content {
+  flex: 1;
+  max-width: 50%;
+  color: #000000;
+  text-align: left;
+  padding: 40px 20px; /* Controls spacing inside the text area */
+}
+
+/* ================
+   Hero Title Text
+=================== */
+.hero-title {
+  font-size: 55px;         /* Controls main heading size */
+  font-weight: bold;
+  margin-bottom: 10px;     /* Gap between title and subtitle */
+  line-height: 1.1;
+  padding-top: 25px;       /* Top spacing for hero section */
+}
+
+/* ==================
+   Hero Subheading Text
+===================== */
+.hero-subtitle {
+  font-size: 20px;         /* Controls subtitle text size */
+  font-weight: 400;
+  margin-bottom: 15px;     /* Gap between subtitle and button */
+  line-height: 1.1;        /* Line height for spacing between lines */
+  max-width: 500px;
+  color: #000000;
+}
+
+/* ==================
+   Primary Button (Main CTA)
+===================== */
+.hero-btn {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* ==================
+   Secondary Button (Use if needed)
+===================== */
+.hero-btn.secondary {
+  background-color: transparent;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+  padding: 10px 32px;
+  font-weight: 600;
+}
+
+.hero-btn.secondary:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+/* ==================
+   Hero mobile styles
+===================== */
+
+@media (max-width: 768px) {
+  /* 🔹 Hero Section */
+  .hero {
+    position: relative; /* Enable positioning context for overlay */
+    padding: 0; /* Remove padding for overlay on mobile */
+    min-height: auto; /* Let height be natural */
+  }
+
+ /* 🔹 Video Background */
+  .hero-video {
+    width: 100%; /* Ensure video fills width */
+    height: auto; /* Auto height for responsive scaling */
+    max-height: 360px; /* Prevent video from being too tall */
+    object-fit: cover; /* Crop edges instead of stretching */
+    border-radius: 0px; /* Slight rounding for modern look */
+    padding-top: 50px;
+    transform: scale(1.6); /* slightly zoom in so edges don't show */
+    transition: filter 0.3s ease;
+    filter: brightness(1.2) saturate(0.9) hue-rotate(250deg) blur(5px); /* Optional blue tint */
+  }
+
+  /* Text container adjustments */
+  .hero-content {
+    max-width: 100%;
+    padding: 20px 15px;  /* more balanced padding on sides */
+    text-align: center;  /* center text for mobile */
+    box-sizing: border-box;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90%;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Title */
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.3;
+    margin: 0 0 12px 0;
+    padding: 0;
+    width: 100%;
+    font-weight: 700;
+  }
+
+  /* Subtitle */
+  .hero-subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+    padding: 0 10px;
+    max-width: 100%;
+    color: #000;
+  }
+
+  /* Button container - assuming you have a wrapping div like .hero-buttons */
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 0 10px;
+  }
+
+  /* Buttons */
+  .hero-btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 0;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+}
+
+
+/* === CENTER LOGO SECTION === */
+.center-logo {
+  display: flex;                  /* Use Flexbox for alignment */
+  justify-content: center;       /* Center horizontally */
+  align-items: center;           /* Center vertically */
+  height: 200px;                 /* Height of the section */
+  background-color: #ffffff;     /* White background */
+  padding: 10px 0;
+}
+
+/* Logo image style */
+.center-logo-img {
+  width: 40px;                   /* Control size */
+  height: auto;                  /* Maintain aspect ratio */
+  opacity: 0.9;                  /* Slight transparency (optional) */
+  filter: hue-rotate(220deg) saturate(2) brightness(1.1); /* Recolors to blue */
+}
+
+/* === CENTER LOGO SECTION MOBILE === */
+@media (max-width: 768px) {
+  .center-logo {
+    padding-top: 100px;
+  }
+}
+
+/* Section padding and background */
+.foundational-section {
+  padding: 10px 40px; /* space around the whole section */
+  background: #fff; /* white background */
+}
+
+/* Flex layout for text and video side-by-side */
+.foundational-container {
+  display: flex; /* side by side layout */
+  justify-content: center; /* center the whole content */
+  align-items: center; /* vertical align */
+  gap: 60px; /* space between video and text */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  max-width: 1400px; /* limit the full width */
+  margin: 0 auto; /* center the container */
+}
+
+/* Direct styling for the video tag */
+.foundational-container video {
+  width: 100%; /* responsive full width */
+  max-width: 600px; /* limit max width */
+  transform: scale(1.2);
+  filter: brightness(1.2) saturate(0.9) hue-rotate(250deg); /* Optional blue tint */
+  border: none; /* remove border */
+  border-radius: 0; /* no rounded edges */
+  box-shadow: none; /* remove shadow or glow */
+  display: block; /* remove any inline spacing */
+}
+
+/* Grid layout for 2x2 writeups */
+.foundational-text-grid {
+  display: grid; /* use CSS grid */
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  gap: 30px; /* space between each grid box */
+  flex: 1; /* take available space */
+  max-width: 600px; /* limit text area width */
+}
+
+/* Each tech box */
+.tech-box {
+  padding: 10px; /* space inside each box */
+}
+
+/* Tech title */
+.tech-box h3 {
+  font-size: 20px; /* heading size */
+  font-weight: bold; /* bold text */
+  margin-bottom: 10px; /* space below heading */
+  color: #007BFF; /* dark blue color */
+}
+
+/* Tech description */
+.tech-box p {
+  font-size: 16px; /* body text size */
+  line-height: 1.6; /* line spacing */
+  color: #000000; /* soft grey color */
+}
+
+/* === FOUNDATIONAL SECTION MOBILE === */
+@media (max-width: 768px) {
+  .foundational-section {
+    padding-top: 40px;
+  }
+
+ .foundational-container {
+    flex-direction: column;  /* Stack video and text vertically */
+    align-items: center;
+    gap: 40px;
+    max-width: 100%;
+  }
+
+  .foundational-container video {
+    max-width: 100%;
+    transform: scale(1.3);      /* Remove scaling for mobile */
+  }
+
+  .foundational-text-grid {
+    grid-template-columns: 1fr;  /* Single column grid */
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .tech-box {
+    padding: 10px 10px;
+  }
+
+  .tech-box h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .tech-box p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+} 
+
+/* Wrapper for the entire section */
+.community-reward-section {
+  padding: 100px 70px; /* Adds spacing around the section */
+  background-color: #ffffff; /* White background for clarity */
+}
+
+/* Layout container: flex aligns text and image side by side */
+.community-reward-wrapper {
+  display: flex; /* Makes children sit horizontally */
+  align-items: center; /* Vertically centers items */
+  justify-content: space-between; /* Adds space between text and image */
+  max-width: 1200px; /* Restricts width */
+  margin: 0 auto; /* Centers the content */
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+}
+
+/* Left text container */
+.community-text {
+  flex: 1; /* Takes available space */
+  min-width: 300px; /* Prevents shrinking too small */
+  max-width: 500px; /* Limits width */
+  padding-right: 60px; /* Adds spacing between text and image */
+}
+
+/* Title style */
+.community-text h2 {
+  font-size: 30px; /* Medium-large heading */
+  font-weight: bold; /* Makes it stand out */
+  margin-bottom: 16px; /* Space below title */
+  color: #000000; /* Dark gray for good contrast */
+}
+
+/* Paragraph text */
+.community-text p {
+  font-size: 16px; /* Easy to read size */
+  line-height: 1.6; /* Improves spacing between lines */
+  color: #333333; /* Dark gray for good contrast */
+  margin-bottom: 16px; /* Space between paragraphs */
+}
+
+/* Right image container */
+.community-image {
+  flex: 1; /* Takes available space */
+  min-width: 200px; /* Makes image responsive */
+  text-align: center; /* Center the image */
+}
+
+/* Image itself */
+.community-image img {
+  width: 100%; /* Makes image responsive */
+  max-width: 400px; /* Limits maximum width */
+  transform: scale(1.2);
+  filter: brightness(1.2) saturate(0.9) hue-rotate(250deg); /* Optional blue tint */
+  height: auto; /* Keeps aspect ratio */
+  display: block; /* Removes inline gaps */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* ================================
+   COMMUNITY SECTION MoliLE
+   ================================ */
+
+   @media (max-width: 768px) {
+  .community-reward-section {
+    padding: 50px 20px; /* Less padding on mobile */
+  }
+
+  .community-reward-wrapper {
+    flex-direction: column-reverse; /* Stack text and image vertically */
+    align-items: center;    /* Center all content */
+    gap: 30px;              /* Space between text and image */
+  }
+
+  .community-text {
+    max-width: 100%;        /* Full width */
+    padding-right: 0;       /* Remove right padding */
+    text-align: center;     /* Center text on mobile */
+  }
+
+  .community-text h2 {
+    font-size: 24px;        /* Slightly smaller title */
+  }
+
+  .community-text p {
+    font-size: 15px;        /* Slightly smaller paragraph */
+    margin-bottom: 12px;    /* Slightly tighter spacing */
+  }
+
+  .community-image {
+    max-width: 90%;         /* Limit image width on mobile */
+    min-width: auto;        /* Remove min-width constraint */
+    text-align: center;
+  }
+
+  .community-image img {
+    max-width: 100%;        /* Image fills container */
+    transform: scale(1);    /* Remove scaling for cleaner look */
+  }
+}
+
+/* ================================
+   BLOCKTIME SECTION
+   ================================ */
+
+/* Blocktime section full width */
+.blocktime-section {
+  width: 100vw !important;        /* Full viewport width */
+  max-width: 100vw !important;
+  min-height: 400px;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Video container fills half viewport width & full height */
+.blocktime-video {
+  width: 50vw !important;         /* Exactly half viewport width */
+  height: 100% !important;
+  max-height: 400px;
+  flex: none !important;          /* Prevent flex resizing */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Video fills container */
+.blocktime-bg-video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  filter: brightness(1.2) saturate(0.9) hue-rotate(250deg);
+  background-color: white;
+  display: block;
+}
+
+/* Right text section */
+.blocktime-text {
+  flex: 1; /* Take other half */
+  padding-top: 10px;
+  padding-left: 140px; /* Adds space on the left side */
+  background-color: white; /* Consistent background */
+  text-align: left;
+}
+
+/* "Fast" heading */
+.blocktime-title {
+  font-size: 150px;
+  font-weight: semi-bold;
+  color: #000000;
+  margin-bottom: 0px;
+}
+
+/* Live counter number */
+.blocktime-number {
+  font-size: 30px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0px;
+}
+
+/* Subtitle text */
+.blocktime-subtitle {
+  font-size: 12px;
+  color: #444;
+}
+
+/* blocktime section mobile */
+
+@media (max-width: 768px) {
+  .blocktime-section {
+    flex-direction: column; /* Stack video on top */
+    align-items: flex-start; /* Align content to the left */
+  }
+
+  .blocktime-video {
+    width: 100vw; /* Full width video on mobile */
+    display: flex;
+    justify-content: flex-start; /* Push video to the left */
+    margin-top: -110px; /* Adjust margin to align with header */
+  }
+
+  .blocktime-bg-video {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .blocktime-text {
+    flex: none;
+    width: 100%;
+    padding: 20px 10px 0 10px;
+    text-align: center;      /* Center text for mobile */
+    background-color: transparent;
+  }
+
+  .blocktime-title {
+    font-size: 60px;         /* Much smaller on mobile */
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .blocktime-number {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .blocktime-subtitle {
+    font-size: 14px;
+    color: #666;
+  }
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.dashboard-card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.dashboard-card h4 {
+  margin: 4px 0;
+}
+
+.dashboard-card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.dashboard-card .change {
+  color: #28a745; /* green for positive change */
+}
+
+.dashboard-card .change.negative {
+  color: #dc3545; /* red for negative change */
+}
+
+
+
+
